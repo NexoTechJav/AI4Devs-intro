@@ -1,0 +1,9 @@
+peticion:
+Eres un programador front JS con experiencia y necesito que crees un codigo JavaScript que dada una cadena de texto nos devuelva la misma en orden inverso. Debe existir la posibilidad de borrar el texto e introducir uno nuevo. Utiliza Figma para la hoja de estilos y dame el codigo listo para introducir en un Index.html
+
+
+respuesta:
+Instrucciones
+Crea tres archivos: index.html, styles.css, y script.js.
+Copia el código: Coloca el código correspondiente en cada archivo.
+Abre index.html en tu navegador: Deberías ver un campo de texto donde puedes escribir, junto con botones para invertir y borrar el texto.
