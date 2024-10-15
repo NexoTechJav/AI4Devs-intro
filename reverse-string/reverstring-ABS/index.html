@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <!-- Incluimos el CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-lg max-w-lg w-full">
+        <h1 class="text-2xl font-bold mb-4 text-center">Reverse String</h1>
+        
+        <!-- Input para escribir la cadena -->
+        <input id="inputString" 
+            type="text" 
+            placeholder="Write something..." 
+            maxlength="200"
+            class="w-full p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+        />
+        
+        <!-- Botón para invertir la cadena -->
+        <button 
+            id="reverseButton" 
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-700"
+            onclick="reverseString()"
+        >
+            Reverse
+        </button>
+
+        <!-- Div para mostrar el error en caso de no haber texto -->
+        <div id="error" class="text-red-500 text-center mt-2 hidden">
+            Please enter some text!
+        </div>
+
+        <!-- Div para mostrar el resultado de la cadena invertida -->
+        <div id="resultContainer" class="mt-4 hidden">
+            <p id="reversedString" class="text-center text-xl font-semibold"></p>
+            <!-- Botón para copiar el resultado -->
+            <button 
+                id="copyButton"
+                class="bg-gray-800 text-white px-4 py-2 mt-4 rounded-lg w-full hover:bg-gray-600"
+                onclick="copyToClipboard()"
+            >
+                Copy
+            </button>
+        </div>
+    </div>
+
+    <!-- Incluimos el archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>
