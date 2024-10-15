@@ -1,51 +1,48 @@
-// Select elements
-const textInput = document.getElementById('textInput');
-const charCount = document.getElementById('charCount');
-const reverseBtn = document.getElementById('reverseBtn');
-const clearBtn = document.getElementById('clearBtn');
-const reversedTextContainer = document.getElementById('reversedTextContainer');
+// Get elements
+const inputText = document.getElementById('inputText');
+const reverseButton = document.getElementById('reverseButton');
+const clearButton = document.getElementById('clearButton');
 const reversedText = document.getElementById('reversedText');
-const clipboardBtn = document.getElementById('clipboardBtn');
+const copyButton = document.getElementById('copyButton');
 const copyMessage = document.getElementById('copyMessage');
+const charCount = document.getElementById('charCount');
 
-// Updates character counter and button states
-function updateCharCount() {
-  const textLength = textInput.value.length;
-  charCount.textContent = `${textLength}/100`;
-  const hasText = textLength > 0;
-  reverseBtn.disabled = !hasText;
-  clearBtn.disabled = !hasText;
-  hideReversedText();
-}
+// Update char counter and toggle buttons
+inputText.addEventListener('input', () => {
+    const length = inputText.value.length;
+    charCount.textContent = `${length}/100`;
+    const hasText = length > 0;
 
-// Reverses the text in the input
-function reverseText() {
-  const text = textInput.value;
-  const reversed = text.split('').reverse().join('');
-  reversedText.textContent = reversed;
-  reversedTextContainer.classList.remove('hidden');
-}
+    reverseButton.disabled = !hasText;
+    clearButton.disabled = !hasText;
+    reversedText.classList.add('hidden');
+    copyButton.classList.add('hidden');
+    copyMessage.classList.add('hidden');
+});
 
-// Clears the text from input and hides reversed text
-function clearText() {
-  textInput.value = '';
-  updateCharCount();
-}
+// Reverse the text
+reverseButton.addEventListener('click', () => {
+    const reversed = inputText.value.split('').reverse().join('');
+    reversedText.textContent = reversed;
+    reversedText.classList.remove('hidden');
+    copyButton.classList.remove('hidden');
+});
 
-// Copies reversed text to clipboard and shows confirmation message
-function copyToClipboard() {
-  navigator.clipboard.writeText(reversedText.textContent).then(() => {
-    clipboardBtn.classList.add('hidden');
-    copyMessage.classList.remove('hidden');
-    setTimeout(() => {
-      clipboardBtn.classList.remove('hidden');
-      copyMessage.classList.add('hidden');
-    }, 2000);
-  });
-}
+// Clear the text
+clearButton.addEventListener('click', () => {
+    inputText.value = '';
+    charCount.textContent = '0/100';
+    reverseButton.disabled = true;
+    clearButton.disabled = true;
+    reversedText.classList.add('hidden');
+    copyButton.classList.add('hidden');
+    copyMessage.classList.add('hidden');
+});
 
-// Hides the reversed text container and clipboard message
-function hideReversedText() {
-  reversedTextContainer.classList.add('hidden');
-  copyMessage.classList.add('hidden');
-}
+// Copy reversed text to clipboard
+copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText(reversedText.textContent).then(() => {
+        copyMessage.classList.remove('hidden');
+        setTimeout(() => copyMessage.classList.add('hidden'), 2000);
+    });
+});
