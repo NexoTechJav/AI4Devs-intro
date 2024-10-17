@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse String</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+      <!-- Header -->
+      <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">
+        Reverse String
+      </h1>
+
+      <!-- Input Box -->
+      <input
+        id="inputText"
+        type="text"
+        placeholder="Enter your message"
+        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 mb-4"
+      />
+
+      <!-- Reverse Button -->
+      <button
+        id="reverseButton"
+        class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg flex justify-center items-center space-x-2 hover:bg-blue-600 transition-colors mb-4"
+      >
+        <span>Reverse</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      <!-- Output Reversed Message -->
+      <div
+        id="output"
+        class="text-center text-lg font-semibold text-gray-700 my-4"
+      ></div>
+
+      <!-- Copy Button -->
+      <button
+        id="copyButton"
+        class="w-full bg-gray-500 text-white py-2 px-4 rounded-lg flex justify-center items-center space-x-2 hover:bg-gray-600 transition-colors"
+      >
+        <span>Copy Reversed Text</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
