@@ -1,0 +1,14 @@
+/* Estilo adicional para mejorar la experiencia visual */
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-diagrama-circuito-cara-tecnologia_1017-18300.jpg?w=826&t=st=1728999122~exp=1728999722~hmac=1908d5404a448abccaa7b74cf7ab330ad3989ed3f93ce3ce4cc9b1b30937faf6'); /* Asegúrate de reemplazar la URL de la imagen */
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+}
+
+.container {
+    max-width: 600px;
+}
