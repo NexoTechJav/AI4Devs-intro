@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String</title>
+    <!-- Enlace a Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Enlace al archivo JavaScript -->
+    <script defer src="scripts.js"></script>
+</head>
+<body class="bg-gray-50 flex justify-center items-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-gray-700">Reverse String</h1>
+
+        <!-- Caja de texto para introducir el texto -->
+        <input 
+            type="text" 
+            id="inputText" 
+            placeholder="Hello, welcome to AI4Devs" 
+            class="border border-gray-300 rounded-md w-full p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        <!-- Botón para invertir el texto -->
+        <button 
+            id="reverseButton"
+            class="bg-blue-500 text-white font-bold py-2 px-4 rounded w-full hover:bg-blue-600 flex items-center justify-center">
+            Reverse <span class="ml-2">&#x21bb;</span>
+        </button>
+
+        <!-- Etiqueta para mostrar el resultado del texto invertido -->
+        <p class="mt-4 text-lg font-mono text-gray-800" id="outputText"></p>
+
+        <!-- Botón para copiar el resultado -->
+        <button 
+            id="copyButton"
+            class="mt-4 bg-gray-700 text-white font-bold py-2 px-4 rounded w-full flex items-center justify-center">
+            Copy <span class="ml-2">&#x1f4cb;</span>
+        </button>
+    </div>
+</body>
+</html>
